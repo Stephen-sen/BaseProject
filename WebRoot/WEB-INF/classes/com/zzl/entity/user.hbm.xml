@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+    <class name="com.zzl.entity.FjwzUser" table="fjwz_user" >
+     <!-- 配置主键 -->
+    <id name="user_id" column="user_id" type="integer">
+    <generator class="increment"></generator>
+    </id>
+    <!-- 配置其他属性 -->
+    <property name="user_account" column="user_account" not-null="true"></property>
+    <property name="user_password" column="user_password" not-null="true"></property>
+    <property name="user_name" column="user_name" not-null="true"></property>
+    <property name="user_sex" column="user_sex"></property>
+    <property name="user_state" column="user_state" not-null="true"></property>
+    <property name="user_department" column="user_department" ></property>
+    <property name="user_position" column="user_position" ></property>
+    <property name="user_delete" column="user_delete" ></property>    
+    <property name="user_roleId" column="user_roleid" not-null="true"></property> 
+    <property name="user_address" column="user_address" ></property>  
+    <property name="user_phone" column="user_phone" ></property>  
+    <property name="user_email" column="user_email" ></property> 
+     <property name="user_age" column="user_age" ></property>  
+    <property name="user_remark" column="user_remark" ></property>     
+    </class>
+    </hibernate-mapping>

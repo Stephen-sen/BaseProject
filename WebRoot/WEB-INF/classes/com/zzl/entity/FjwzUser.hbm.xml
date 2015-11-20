@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+    <class name="com.zzl.entity.FjwzUser" table="fjwz_user" catalog="fjwz1">
+        <id name="userId" type="java.lang.Integer">
+            <column name="USER_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="userAccount" type="java.lang.String">
+            <column name="USER_ACCOUNT" length="20" not-null="true">
+                <comment>登陆账号</comment>
+            </column>
+        </property>
+        <property name="userPassword" type="java.lang.String">
+            <column name="USER_PASSWORD" length="200" not-null="true">
+                <comment>登陆密码</comment>
+            </column>
+        </property>
+        <property name="userDepartment" type="java.lang.String">
+            <column name="USER_DEPARTMENT" length="20">
+                <comment>部门</comment>
+            </column>
+        </property>
+        <property name="userPosition" type="java.lang.String">
+            <column name="USER_POSITION" length="20">
+                <comment>职位</comment>
+            </column>
+        </property>
+        <property name="userName" type="java.lang.String">
+            <column name="USER_NAME" length="20" not-null="true">
+                <comment>用户姓名</comment>
+            </column>
+        </property>
+        <property name="userState" type="java.lang.Integer">
+            <column name="USER_STATE" not-null="true">
+                <comment>用户状态</comment>
+            </column>
+        </property>
+        <property name="userSex" type="java.lang.String">
+            <column name="USER_SEX" length="8">
+                <comment>性别</comment>
+            </column>
+        </property>
+        <property name="userDelete" type="java.lang.Integer">
+            <column name="USER_DELETE">
+                <comment>假删除</comment>
+            </column>
+        </property>
+        <property name="userRoleid" type="java.lang.Integer">
+            <column name="USER_ROLEID" not-null="true">
+                <comment>该用户所对应的角色</comment>
+            </column>
+        </property>
+        <property name="userAge" type="java.lang.String">
+            <column name="USER_AGE" length="4">
+                <comment>年龄</comment>
+            </column>
+        </property>
+        <property name="userAddress" type="java.lang.String">
+            <column name="USER_ADDRESS" length="80">
+                <comment>联系地址</comment>
+            </column>
+        </property>
+        <property name="userEmail" type="java.lang.String">
+            <column name="USER_EMAIL" length="30">
+                <comment>用户邮箱</comment>
+            </column>
+        </property>
+        <property name="userPhone" type="java.lang.String">
+            <column name="USER_PHONE" length="11">
+                <comment>联系方式</comment>
+            </column>
+        </property>
+        <property name="userRemark" type="java.lang.String">
+            <column name="USER_REMARK">
+                <comment>备注</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
